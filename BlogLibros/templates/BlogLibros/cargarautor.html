@@ -1,0 +1,18 @@
+{% extends 'BlogLibros/base.html' %}
+{% load static %}
+
+{% block main %}
+
+    <h1 style="color: white"> Ingrese los datos del autor que desea registrar <h1> 
+    <form action="" method="POST">
+        {% csrf_token %}
+        
+        <table style="color: white">
+
+            {{ miFormulario.as_table }}
+            
+        </table>
+        <input type="submit" value="Enviar">
+
+    </form>
+{% endblock main %}
