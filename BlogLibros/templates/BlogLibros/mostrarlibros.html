@@ -4,8 +4,12 @@
 {% block main %}
 
     {% for libro in libros %}
-
-    <li> Titulo: {{ libro.titulo }} | Autor: {{ libro.autor }} | Genero: {{ libro.genero }} </li>
+        <h1 style="color: white">
+        <li> 
+            Titulo: {{ libro.titulo }} 
+            Autor: {{ libro.autor }} 
+            Genero: {{ libro.genero }} 
+        </li>
     {% endfor %}
 
 {% endblock main %}

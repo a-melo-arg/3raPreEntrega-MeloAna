@@ -26,13 +26,13 @@ def busquedaLibro(request):
 
 def buscar_libro(request):   #busca en la BD
     if request.GET ["librobuscado"]:
-        librobuscado = request.GET ["librobuscado"]
-        libros = Libro.objects.filter(titulo__icontains=librobuscado)
+        librobusco = request.GET ["librobuscado"]
+        libros = Libro.objects.filter(titulo__icontains=librobusco)
             
-        return render(request, "BlogLibros/mostrarlibros.html", {"titulo":librobuscado, "libros":libros})  
+        return render(request, "BlogLibros/mostrarlibros.html", {"titulo":librobusco, "libros":libros})  
     else:
         respuesta = "ERROR, por favor ingrese el nombre del libro"
-    return HttpResponse(respuesta)
+        return HttpResponse(respuesta)
 
 def cargar_autor(request):
     if request.method == "POST":
